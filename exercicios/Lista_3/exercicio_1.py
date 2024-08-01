@@ -1,3 +1,5 @@
+import colorama
+
 ''' 
 Utilizando listas faça um programa que faça 5 perguntas para uma
 pessoa sobre um crime.
@@ -31,10 +33,16 @@ for pergunta in perguntas:
                 break
 
 if respostas_suspeita == 2:
-    print('\nVocê é considerado suspeito')
+    print(colorama.Fore.BLUE +'\nVocê é considerado suspeito')
+    print(colorama.Style.RESET_ALL)
 elif respostas_suspeita == 3 or respostas_suspeita == 4:
-    print('\nVocê é considerado cúmplice')
+    print(colorama.Fore.YELLOW +'\nVocê é considerado cúmplice')
+    print(colorama.Style.RESET_ALL)
 elif respostas_suspeita == 5:
-    print('\nVocê é considerado assassino')
+    print(colorama.Fore.RED +'\nVocê é considerado assassino')
+    print(colorama.Style.RESET_ALL)
+else:
+    print(colorama.Fore.GREEN +'\nVocê é considerado inocente')
+    print(colorama.Style.RESET_ALL)
 
     
